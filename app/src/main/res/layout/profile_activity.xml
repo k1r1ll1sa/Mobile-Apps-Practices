@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#2B2B2B"
+    android:fitsSystemWindows="true">
+
+    <TextView
+        android:id="@+id/textTitle"
+        android:layout_width="155dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="128dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="128dp"
+        android:fontFamily="@font/anonymous_pro"
+        android:text="@string/profile_title"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="26sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/languageButton"
+        style="@android:style/Widget.Holo.ImageButton"
+        android:layout_width="29dp"
+        android:layout_height="29dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:background="#00FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_language_icon" />
+
+    <ImageButton
+        android:id="@+id/backButton"
+        style="@android:style/Widget.Holo.ImageButton"
+        android:layout_width="27dp"
+        android:layout_height="29dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:background="#00FFFFFF"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_arrow_back" />
+
+    <ImageView
+        android:id="@+id/imageAvatar"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginStart="130dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="131dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textTitle"
+        app:srcCompat="@drawable/avatar_placeholder" />
+
+    <TextView
+        android:id="@+id/textUsername"
+        android:layout_width="150dp"
+        android:layout_height="27dp"
+        android:layout_marginStart="133dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="128dp"
+        android:fontFamily="@font/anonymous_pro"
+        android:text="@string/profile_username"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="26sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageAvatar" />
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginStart="55dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="56dp"
+        android:layout_marginBottom="10dp"
+        android:background="?android:attr/listDivider"
+        android:backgroundTint="#B3B3B3"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textUsername" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="330dp"
+        android:layout_height="430dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="41dp"
+        android:layout_marginBottom="34dp"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/divider">
+
+        <Button
+            android:id="@+id/buttonAddress"
+            android:layout_width="330dp"
+            android:layout_height="55dp"
+            android:layout_marginBottom="10dp"
+            android:backgroundTint="#1F1F1F"
+            android:fontFamily="@font/anonymous_pro"
+            android:insetTop="0dp"
+            android:insetBottom="0dp"
+            android:text=""
+            android:textAlignment="textStart"
+            android:textAllCaps="false"
+            app:cornerRadius="20dp" />
+
+        <Button
+            android:id="@+id/buttonBankCard"
+            android:layout_width="330dp"
+            android:layout_height="55dp"
+            android:layout_marginBottom="10dp"
+            android:backgroundTint="#1F1F1F"
+            android:fontFamily="@font/anonymous_pro"
+            android:insetTop="0dp"
+            android:insetBottom="0dp"
+            android:text=""
+            android:textAlignment="textStart"
+            android:textAllCaps="false"
+            app:cornerRadius="20dp" />
+
+        <CheckBox
+            android:id="@+id/checkBoxDontCall"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:buttonTint="#1F1F1F"
+            android:checked="false"
+            android:fontFamily="@font/anonymous_pro"
+            android:text="@string/profile_dont_call"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <Button
+            android:id="@+id/buttonLogout"
+            android:layout_width="250dp"
+            android:layout_height="55dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:backgroundTint="#424242"
+            android:fontFamily="@font/anonymous_pro"
+            android:insetTop="0dp"
+            android:insetBottom="0dp"
+            android:text="Выйти"
+            android:textAlignment="center"
+            android:textColor="#B3B3B3"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:cornerRadius="20dp" />
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
