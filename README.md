@@ -3,5 +3,9 @@
 2. Откройте эту папку и в терминале выполните:
    gradlew.bat assembleDebug
 
+   или
+
+   .\gradlew.bat, если gradle.bat не определяется как команда в терминале
+
 6. Дождитесь окончания сборки (BUILD SUCCESSFUL).
 7. Готовый APK-файл будет находиться по пути: app/build/outputs/apk/debug/app-debug.apk
