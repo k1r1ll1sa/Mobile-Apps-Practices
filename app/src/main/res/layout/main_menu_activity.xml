@@ -7,7 +7,6 @@
     android:background="#2B2B2B"
     android:fitsSystemWindows="true">
 
-
     <TextView
         android:id="@+id/textViewRestaurants"
         android:layout_width="wrap_content"
@@ -29,10 +28,11 @@
         android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
         android:adjustViewBounds="false"
-        android:backgroundTint="#00FFFFFF"
+        android:scaleType="centerCrop"
+        android:clipToOutline="true"
+        android:background="@drawable/avatar_rounded_bg"
         android:cropToPadding="false"
         android:padding="0dp"
-        android:scaleType="centerInside"
         app:iconTint="@null"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -223,7 +223,6 @@
                     android:textSize="16sp" />
             </LinearLayout>
         </LinearLayout>
-
     </HorizontalScrollView>
 
     <ScrollView
@@ -240,135 +239,10 @@
         app:layout_constraintTop_toBottomOf="@+id/horizontalScrollView">
 
         <LinearLayout
+            android:id="@+id/restaurantsContainer"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="200dp"
-                android:layout_marginBottom="20dp"
-                android:orientation="vertical">
-
-                <ImageView
-                    android:id="@+id/imageView8"
-                    android:layout_width="match_parent"
-                    android:layout_height="175dp"
-                    android:scaleType="centerCrop"
-                    app:srcCompat="@drawable/rostics" />
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="horizontal">
-
-                    <TextView
-                        android:id="@+id/textViewRestName0"
-                        android:layout_width="100dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:fontFamily="@font/anonymous_pro"
-                        android:text="@string/main_menu_rest_name0"
-                        android:textAlignment="textStart"
-                        android:textColor="#fff"
-                        android:textSize="20sp" />
-
-                    <TextView
-                        android:id="@+id/textViewRestGrade0"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:fontFamily="@font/anonymous_pro"
-                        android:text="@string/main_menu_rest_grade0"
-                        android:textAlignment="textEnd"
-                        android:textColor="#fff"
-                        android:textSize="20sp" />
-                </LinearLayout>
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="200dp"
-                android:layout_marginBottom="20dp"
-                android:orientation="vertical">
-
-                <ImageView
-                    android:id="@+id/imageView9"
-                    android:layout_width="match_parent"
-                    android:layout_height="175dp"
-                    android:scaleType="centerCrop"
-                    app:srcCompat="@drawable/vkusno_i_tochka" />
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="horizontal">
-
-                    <TextView
-                        android:id="@+id/textViewRestName1"
-                        android:layout_width="100dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:fontFamily="@font/anonymous_pro"
-                        android:text="@string/main_menu_rest_name1"
-                        android:textAlignment="textStart"
-                        android:textColor="#fff"
-                        android:textSize="20sp" />
-
-                    <TextView
-                        android:id="@+id/textViewRestGrade1"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:fontFamily="@font/anonymous_pro"
-                        android:text="@string/main_menu_rest_grade1"
-                        android:textAlignment="textEnd"
-                        android:textColor="#fff"
-                        android:textSize="20sp" />
-                </LinearLayout>
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="200dp"
-                android:layout_marginBottom="20dp"
-                android:orientation="vertical">
-
-                <ImageView
-                    android:id="@+id/imageView10"
-                    android:layout_width="match_parent"
-                    android:layout_height="175dp"
-                    android:scaleType="centerCrop"
-                    app:srcCompat="@drawable/burger_king" />
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="horizontal">
-
-                    <TextView
-                        android:id="@+id/textViewRestName2"
-                        android:layout_width="100dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:fontFamily="@font/anonymous_pro"
-                        android:text="@string/main_menu_rest_name2"
-                        android:textAlignment="textStart"
-                        android:textColor="#fff"
-                        android:textSize="20sp" />
-
-                    <TextView
-                        android:id="@+id/textViewRestGrade2"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:fontFamily="@font/anonymous_pro"
-                        android:text="@string/main_menu_rest_grade2"
-                        android:textAlignment="textEnd"
-                        android:textColor="#fff"
-                        android:textSize="20sp" />
-                </LinearLayout>
-            </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -411,6 +285,8 @@
                     android:scaleType="centerCrop"
                     app:srcCompat="@drawable/temp_map" />
             </LinearLayout>
+
         </LinearLayout>
     </ScrollView>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
