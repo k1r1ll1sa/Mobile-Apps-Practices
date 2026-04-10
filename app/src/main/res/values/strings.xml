@@ -57,5 +57,7 @@
     <string name="cart_more_product2">Барбекю</string>
     <string name="cart_more_product3">Кола</string>
     <string name="cart_more_product4">Кола Zero</string>
-    <string name="cart_more_product5">Салфетки</string>>
+    <string name="cart_more_product5">Салфетки</string>
+    <string name="menu_rest_name">menu_rest_name</string>
+    <string name="goto_cart_bttn">В корзину</string>>
 </resources>
