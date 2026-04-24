@@ -13,6 +13,7 @@ import android.graphics.RectF
 import android.os.Bundle
 import android.util.Base64
 import android.view.LayoutInflater
+import android.widget.Button
 import android.widget.ImageButton
 import android.widget.ImageView
 import android.widget.LinearLayout
@@ -39,6 +40,7 @@ class MainMenuActivity : AppCompatActivity() {
 
         val profileButton = findViewById<ImageButton>(R.id.imageButtonProfile)
         val cartButton = findViewById<ImageButton>(R.id.imageButtonGoToCart)
+        val gotomapButton = findViewById<Button>(R.id.button)
 
         profileButton.setOnClickListener {
             startActivity(Intent(this, ProfileActivity::class.java))
@@ -46,6 +48,10 @@ class MainMenuActivity : AppCompatActivity() {
 
         cartButton.setOnClickListener {
             startActivity(Intent(this, CartActivity::class.java))
+        }
+
+        gotomapButton.setOnClickListener {
+            startActivity(Intent(this, RestaurantMapActivity::class.java))
         }
 
         loadUserAvatar(profileButton)

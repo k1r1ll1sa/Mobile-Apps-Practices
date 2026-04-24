@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <AutoCompleteTextView
+        android:id="@+id/autoCompleteAddress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Начните вводить адрес (город, улица, дом)..."
+        android:completionThreshold="2"
+        android:dropDownHeight="200dp"
+        android:padding="12dp"
+        android:background="@android:drawable/edit_text"
+        android:textColor="@android:color/black"
+        android:textColorHint="#888888" />
+</LinearLayout>
